@@ -4,17 +4,11 @@ import android.os.AsyncTask;
 
 public class Async extends AsyncTask<Void, Integer, Integer> {
 
-    public interface AsyncTask{
-        void onPostExecuted(int result);
-    }
-
     private Model model;
-    private AsyncTask listener;
     private int s;
 
-    public Async(Model model, AsyncTask listener){
+    public Async(Model model){
         this.model = model;
-        this.listener = listener;
     }
 
     @Override
@@ -22,6 +16,7 @@ public class Async extends AsyncTask<Void, Integer, Integer> {
         super.onPreExecute();
         s = 3000;
         model.setMax(s);
+        model.setEnable(false);
     }
 
     @Override
@@ -49,8 +44,6 @@ public class Async extends AsyncTask<Void, Integer, Integer> {
     @Override
     protected void onPostExecute(Integer integer) {
         super.onPostExecute(integer);
-        listener.onPostExecuted(integer);
+        model.setEnable(true);
     }
-
-
 }

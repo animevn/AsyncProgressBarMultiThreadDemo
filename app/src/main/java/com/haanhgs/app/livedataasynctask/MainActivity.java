@@ -36,17 +36,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        model.getEnable().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                bnStart.setEnabled(aBoolean);
+            }
+        });
+
         bnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bnStart.setEnabled(false);
-                Async async = new Async(model, new Async.AsyncTask() {
-                    @Override
-                    public void onPostExecuted(int result) {
-                        bnStart.setEnabled(true);
-                    }
-                });
-                async.execute();
+                new Async(model).execute();
             }
         });
     }
