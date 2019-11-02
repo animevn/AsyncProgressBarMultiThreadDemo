@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private  Model model;
+    private ThreadModel model;
     private int max1 = 5000;
     private int max2 = 9000;
     private int max3 = 10000;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         tvResult2 = findViewById(R.id.tvResult2);
         tvResult3 = findViewById(R.id.tvResult3);
 
-        model = ViewModelProviders.of(this).get(Model.class );
+        model = ViewModelProviders.of(this).get(ThreadModel.class );
         model.setMax1(max1);
         model.setMax2(max2);
         model.setMax3(max3);
@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 pbrMain2.setMax(integer);
             }
         });
-
-
     }
 
     private void handleProgressBar3(){
@@ -144,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -158,6 +155,4 @@ public class MainActivity extends AppCompatActivity {
         handleProgressBar3();
         handleButton3();
     }
-
-
 }

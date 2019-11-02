@@ -1,11 +1,10 @@
 package com.haanhgs.app.livedataasynctask;
 
 import android.os.AsyncTask;
-
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class Model extends ViewModel {
+public class ThreadModel extends ViewModel {
 
     private MutableLiveData<Integer> progress1 = new MutableLiveData<>();
     private MutableLiveData<Integer> progress2 = new MutableLiveData<>();
