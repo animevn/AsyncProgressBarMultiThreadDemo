@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int max = 3000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         final ProgressBar pbrMain = findViewById(R.id.pbrMain);
         final Button bnStart = findViewById(R.id.bnStart);
         final TextView tvResult = findViewById(R.id.tvResult);
-        int max;
 
         final Model model = ViewModelProviders.of(this).get(Model.class );
+        model.setMax(3000);
         model.getProgress().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
@@ -46,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         bnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bnStart.setEnabled(false);
-                new Async(model).execute();
+                model.runTask(max);
             }
         });
     }
+
+
 }

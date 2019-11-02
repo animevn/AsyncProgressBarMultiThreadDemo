@@ -2,10 +2,9 @@ package com.haanhgs.app.livedataasynctask;
 
 import android.os.AsyncTask;
 
-public class Async extends AsyncTask<Void, Integer, Integer> {
+public class Async extends AsyncTask<Integer, Integer, Integer> {
 
     private Model model;
-    private int s;
 
     public Async(Model model){
         this.model = model;
@@ -14,15 +13,13 @@ public class Async extends AsyncTask<Void, Integer, Integer> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        s = 3000;
-        model.setMax(s);
         model.setEnable(false);
     }
 
     @Override
-    protected Integer doInBackground(Void... voids) {
+    protected Integer doInBackground(Integer... integers) {
         int count = 0;
-        while (count <= s){
+        while (count <= integers[0]){
             try{
                 Thread.sleep(200);
                 publishProgress(count);
@@ -30,9 +27,9 @@ public class Async extends AsyncTask<Void, Integer, Integer> {
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
-            count += 100;
+            count += integers[0]/10;
         }
-        return s;
+        return count;
     }
 
     @Override
