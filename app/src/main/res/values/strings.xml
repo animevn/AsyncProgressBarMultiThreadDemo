@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LiveDataAsyncTask</string>
+    <string name="bnStart">Start</string>
 </resources>
