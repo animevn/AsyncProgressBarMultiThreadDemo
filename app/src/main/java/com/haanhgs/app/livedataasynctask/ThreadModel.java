@@ -42,7 +42,6 @@ public class ThreadModel extends ViewModel {
         this.progress3.setValue(progress3);
     }
 
-
     public MutableLiveData<Integer> getMax1() {
         return max1;
     }
