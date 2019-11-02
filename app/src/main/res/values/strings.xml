@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">LiveDataAsyncTask</string>
+    <string name="app_name">AsyncProgressBarMultiThreadDemo</string>
     <string name="bnStart">Start</string>
 </resources>
