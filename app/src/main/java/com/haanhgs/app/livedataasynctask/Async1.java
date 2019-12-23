@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 public class Async1 extends AsyncTask<Integer, Integer, Integer> {
 
-    private ThreadModel model;
+    private final ThreadModel model;
 
     public Async1(ThreadModel model){
         this.model = model;

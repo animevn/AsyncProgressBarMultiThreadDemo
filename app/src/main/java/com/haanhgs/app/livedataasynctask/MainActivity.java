@@ -12,9 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private ThreadModel model;
-    private int max1 = 5000;
-    private int max2 = 9000;
-    private int max3 = 10000;
+    private final int max1 = 5000;
+    private final int max2 = 9000;
+    private final int max3 = 10000;
 
     private ProgressBar pbrMain1;
     private ProgressBar pbrMain2;
