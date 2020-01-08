@@ -17,6 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    //java 8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -30,6 +36,10 @@ dependencies {
     //for viewmodel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     annotationProcessor "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     //for cardview
     implementation 'androidx.cardview:cardview:1.0.0'
