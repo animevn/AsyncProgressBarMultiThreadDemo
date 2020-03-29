@@ -1,21 +1,21 @@
-package com.haanhgs.app.livedataasynctask;
+package com.haanhgs.app.asynctask;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-public class Async1 extends AsyncTask<Integer, Integer, Void> {
+public class Async3 extends AsyncTask<Integer, Integer, Void> {
 
-    private static final String ETAG = "E.Async1";
+    private static final String ETAG = "E.Async3";
     private ThreadViewModel model;
 
-    public Async1(ThreadViewModel model) {
+    public Async3(ThreadViewModel model) {
         this.model = model;
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        model.setEnable1(false);
+        model.setEnable3(false);
     }
 
     @Override
@@ -38,12 +38,12 @@ public class Async1 extends AsyncTask<Integer, Integer, Void> {
     @Override
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
-        model.setProgress1(values[0]);
+        model.setProgress3(values[0]);
     }
 
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        model.setEnable1(true);
+        model.setEnable3(true);
     }
 }

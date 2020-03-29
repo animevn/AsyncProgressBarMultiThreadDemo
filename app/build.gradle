@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.haanhgs.app.livedataasynctask"
+        applicationId "com.haanhgs.app.asynctask"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -34,8 +34,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //for viewmodel
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    annotationProcessor "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    annotationProcessor "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
     //butterknife
     implementation 'com.jakewharton:butterknife:10.2.0'

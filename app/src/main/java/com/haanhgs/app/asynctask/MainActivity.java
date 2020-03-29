@@ -1,4 +1,4 @@
-package com.haanhgs.app.livedataasynctask;
+package com.haanhgs.app.asynctask;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViewModel(){
-        model = ViewModelProviders.of(this).get(ThreadViewModel.class);
+        model = new ViewModelProvider(this).get(ThreadViewModel.class);
     }
 
     private void handleThread1(){

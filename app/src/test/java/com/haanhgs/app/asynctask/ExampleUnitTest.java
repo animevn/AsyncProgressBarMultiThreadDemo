@@ -1,4 +1,4 @@
-package com.haanhgs.app.livedataasynctask;
+package com.haanhgs.app.asynctask;
 
 import org.junit.Test;
 
