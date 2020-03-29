@@ -6,13 +6,13 @@ import androidx.lifecycle.ViewModel;
 
 public class ThreadViewModel extends ViewModel {
 
-    private MutableLiveData<Integer> progress1 = new MutableLiveData<>();
-    private MutableLiveData<Integer> progress2 = new MutableLiveData<>();
-    private MutableLiveData<Integer> progress3 = new MutableLiveData<>();
+    private final MutableLiveData<Integer> progress1 = new MutableLiveData<>();
+    private final MutableLiveData<Integer> progress2 = new MutableLiveData<>();
+    private final MutableLiveData<Integer> progress3 = new MutableLiveData<>();
 
-    private MutableLiveData<Boolean> enable1 = new MutableLiveData<>();
-    private MutableLiveData<Boolean> enable2 = new MutableLiveData<>();
-    private MutableLiveData<Boolean> enable3 = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> enable1 = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> enable2 = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> enable3 = new MutableLiveData<>();
 
     public MutableLiveData<Integer> getProgress1() {
         return progress1;

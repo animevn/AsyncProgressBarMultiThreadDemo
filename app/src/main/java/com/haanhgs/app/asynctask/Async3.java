@@ -6,7 +6,7 @@ import android.util.Log;
 public class Async3 extends AsyncTask<Integer, Integer, Void> {
 
     private static final String ETAG = "E.Async3";
-    private ThreadViewModel model;
+    private final ThreadViewModel model;
 
     public Async3(ThreadViewModel model) {
         this.model = model;
